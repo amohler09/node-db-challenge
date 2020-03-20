@@ -1,0 +1,19 @@
+{
+  "name": "db-challenge",
+  "version": "1.0.0",
+  "description": "db sprint challenge",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amohler09/node-db-challenge.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amohler09/node-db-challenge/issues"
+  },
+  "homepage": "https://github.com/amohler09/node-db-challenge#readme"
+}
