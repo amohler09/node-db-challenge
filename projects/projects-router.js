@@ -32,6 +32,24 @@ router.get("/:id", (req, res) => {
   });
 });
 
+router.get("/:id/tasks", (req, res) => {
+  const id = req.params.id;
+
+  Projects.findTasks(id)
+    .then(tasks => {
+      if (tasks) {
+        res.status(200).json(tasks);
+      } else {
+        res
+          .status(404)
+          .json({ message: "Cannot find any tasks for this project" });
+      }
+    })
+    .catch(error => {
+      res.status(500).json({ message: "Error retrieving tasks" });
+    });
+});
+
 router.post("/", (req, res) => {
   const newProject = req.body;
   Projects.add(newProject)
